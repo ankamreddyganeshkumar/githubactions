@@ -1,4 +1,4 @@
-name: My First Workflow
+name: My First Workflow updated
 
 on: push
 
@@ -6,6 +6,9 @@ jobs:
   first_job:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - name: Welcome Message
         run: echo "my first job"
         
